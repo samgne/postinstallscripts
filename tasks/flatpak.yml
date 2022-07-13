@@ -61,9 +61,9 @@
   tags:
     - flatpak
 
-- name:  FLATPAK | Install Spotify flatpak
+- name:  FLATPAK | Install Chrome flatpak
   flatpak:
-    name: com.spotify.Client
+    name: com.google.Chrome
     method: system
   tags:
     - flatpak
