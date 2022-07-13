@@ -15,7 +15,7 @@
     - include: tasks/system.yml
     #- include: tasks/repo.yml
     - include: tasks/packages.yml
-    - include: tasks/zsh.yml
+    #- include: tasks/zsh.yml
 
     - name: Delete download directory
       file:
