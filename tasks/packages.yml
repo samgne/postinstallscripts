@@ -12,7 +12,7 @@
 - name: apt | Install base packages
   become: yes
   package:
-    name: [neofetch, adobe-source-code-pro-fonts, zsh, steam]
+    name: [neofetch, adobe-source-code-pro-fonts, zsh, steam, vim]
     state: present
   tags:
     - package
