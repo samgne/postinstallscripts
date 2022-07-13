@@ -67,3 +67,10 @@
     method: system
   tags:
     - flatpak
+    
+- name:  FLATPAK | Install Remmina flatpak
+  flatpak:
+    name: org.remmina.Remmina
+    method: system
+  tags:
+    - flatpak
