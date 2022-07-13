@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  
+  vars:
+    workstation_hostname: 'samg-gamingpc'
+    
+  tasks:
+  
+    - name: Creates download directory
+      file:
+        path: temp
+        state: directory
+
+    - include: tasks/flatpak.yml
+    - include: tasks/system.yml
+    #- include: tasks/repo.yml
+    - include: tasks/packages.yml
+    - include: tasks/zsh.yml
+
+    - name: Delete download directory
+      file:
+        path: temp
+        state: absent

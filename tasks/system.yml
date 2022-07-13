@@ -1,0 +1,9 @@
+---
+- name: SYSTEM | Change the hostname of the desktop workstation
+  become: true
+  hostname:
+    name: "{{ workstation_hostname }}"
+  tags:
+    - system
+    - hostname
+    - desktop

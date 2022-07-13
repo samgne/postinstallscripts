@@ -1,0 +1,69 @@
+---
+- name: FLATPAK | Enable Flathub repository
+  become: yes
+  command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  tags:
+    - flatpak
+
+- name:  FLATPAK | Install Discord flatpak
+  flatpak:
+    name: com.discordapp.Discord
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK | Install Heroic Game Launcher flatpak
+  flatpak:
+    name: com.heroicgameslauncher.hgl 
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK |  Install OBS flatpak
+  flatpak:
+    name: com.obsproject.Studio
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK |  Install VSCode flatpak
+  flatpak:
+    name: com.visualstudio.code
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK |  Install ProtonUp-Qt flatpak
+  flatpak:
+    name: net.davidotek.pupgui2
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK |  Install Kdenlive flatpak
+  flatpak:
+    name: org.kde.kdenlive
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK |  Install VLC flatpak
+  flatpak:
+    name: org.videolan.VLC
+    method: system
+  tags:
+    - flatpak
+
+- name: FLATPAK |  Install Zoom flatpak
+  flatpak:
+    name: us.zoom.Zoom
+    method: system
+  tags:
+    - flatpak
+
+- name:  FLATPAK | Install Spotify flatpak
+  flatpak:
+    name: com.spotify.Client
+    method: system
+  tags:
+    - flatpak

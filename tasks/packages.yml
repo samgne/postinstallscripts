@@ -1,0 +1,30 @@
+---
+- name: APT | Upgrade the system
+  become: true
+  apt:
+    name: "*"
+    state: latest
+  tags:
+    - package
+    - update
+    - apt
+
+- name: apt | Install base packages
+  become: yes
+  package:
+    name: [neofetch, adobe-source-code-pro-fonts, zsh]
+    state: present
+  tags:
+    - package
+    - install-packages
+    - apt
+
+- name: apt | Install programs
+  become: yes
+  package:
+    name: [grub-customizer, exfatprogs, ffmpeg]
+    state: present
+  tags:
+    - package
+    - install-packages
+    - apt
