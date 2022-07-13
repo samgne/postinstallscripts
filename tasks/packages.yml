@@ -22,7 +22,7 @@
 - name: apt | Install programs
   become: yes
   package:
-    name: [grub-customizer, exfatprogs, ffmpeg]
+    name: [grub-customizer, exfat-utils, ffmpeg]
     state: present
   tags:
     - package
